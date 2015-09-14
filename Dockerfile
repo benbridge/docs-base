@@ -24,8 +24,9 @@ RUN apt-get update \
 # TODO: Test to see if the above holds true
 RUN pip install awscli==1.4.4 pyopenssl==0.12
 
-RUN curl -sSL -o /usr/local/bin/hugo https://github.com/SvenDowideit/hugo/releases/download/v0.14%2Bgithublinking/hugo
+#RUN curl -sSL -o /usr/local/bin/hugo https://github.com/SvenDowideit/hugo/releases/download/v0.14%2Bgithublinking/hugo
 #RUN curl -sSL -o /usr/local/bin/hugo https://github.com/SvenDowideit/hugo/releases/download/docker-1/hugo
+ADD hugo /usr/local/bin/hugo
 RUN chmod 755 /usr/local/bin/hugo
 
 #######################
