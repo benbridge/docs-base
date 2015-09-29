@@ -25,9 +25,11 @@ RUN apt-get update \
 RUN pip install awscli==1.4.4 pyopenssl==0.12
 
 #RUN curl -sSL -o /usr/local/bin/hugo https://github.com/SvenDowideit/hugo/releases/download/v0.14%2Bgithublinking/hugo
-#RUN curl -sSL -o /usr/local/bin/hugo https://github.com/SvenDowideit/hugo/releases/download/docker-1/hugo
-ADD hugo /usr/local/bin/hugo
+RUN curl -sSL -o /usr/local/bin/hugo https://github.com/SvenDowideit/hugo/releases/download/test-2/hugo
+#ADD hugo /usr/local/bin/hugo
 RUN chmod 755 /usr/local/bin/hugo
+
+RUN /usr/local/bin/hugo version
 
 #######################
 # Copy the content and theme to the container
